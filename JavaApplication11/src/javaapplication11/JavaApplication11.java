@@ -9,6 +9,8 @@ public class JavaApplication11 {
    
     public static void main(String[] args) {
           Scanner sn= new Scanner (System.in);
+          NewJFrame ventana = new NewJFrame ();
+          ventana.setVisible(true);
         Calculadora Calculadora = new Calculadora();
      calculadoraEspecial CalculadoraEspecial=new calculadoraEspecial();
         boolean salir = false;
