@@ -26,10 +26,13 @@ Calculadora cal = new Calculadora();
         num2 = new javax.swing.JTextField();
         resultado = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
+        area = new javax.swing.JButton();
 
         jFormattedTextField1.setText("jFormattedTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(102, 255, 255));
 
         resta.setText("resta");
         resta.addActionListener(new java.awt.event.ActionListener() {
@@ -70,18 +73,27 @@ Calculadora cal = new Calculadora();
             }
         });
 
+        area.setText(" area de circulo");
+        area.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                areaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(90, 90, 90)
+                .addGap(39, 39, 39)
                 .addComponent(suma)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                .addGap(66, 66, 66)
                 .addComponent(resta)
-                .addGap(124, 124, 124)
+                .addGap(62, 62, 62)
                 .addComponent(multiplicacion)
-                .addGap(106, 106, 106))
+                .addGap(80, 80, 80)
+                .addComponent(area)
+                .addContainerGap(121, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,11 +123,11 @@ Calculadora cal = new Calculadora();
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(59, 59, 59)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(multiplicacion)
-                        .addComponent(resta))
-                    .addComponent(suma))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(multiplicacion)
+                    .addComponent(resta)
+                    .addComponent(suma)
+                    .addComponent(area))
                 .addGap(61, 61, 61)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(resultado)
@@ -173,6 +185,14 @@ Calculadora cal = new Calculadora();
         
     }//GEN-LAST:event_multiplicacionActionPerformed
 
+    private void areaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_areaActionPerformed
+        double numero1 = Double.parseDouble(num1.getText());
+        double numero2 = Double.parseDouble(num2.getText());
+       double resultado = calcu.CalculoArea(numero1, numero2);
+       jTextField2.setText(String.valueOf(resultado));
+        
+    }//GEN-LAST:event_areaActionPerformed
+
     
     public static void main(String args[]) {
   
@@ -205,6 +225,7 @@ Calculadora cal = new Calculadora();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton area;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;

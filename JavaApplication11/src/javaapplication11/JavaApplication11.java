@@ -11,8 +11,7 @@ public class JavaApplication11 {
           Scanner sn= new Scanner (System.in);
           NewJFrame ventana = new NewJFrame ();
           ventana.setVisible(true);
-        Calculadora Calculadora = new Calculadora();
-     calculadoraEspecial CalculadoraEspecial=new calculadoraEspecial();
+  
         boolean salir = false;
         int opcion;
         
@@ -41,7 +40,7 @@ public class JavaApplication11 {
            opcion = sn.nextInt();
           
            
-          
+      /*    
         switch (opcion){
                
                case 1:System.out.println("El resultado de la suma es = " + Calculadora.sumar(10, 5));
@@ -84,7 +83,7 @@ public class JavaApplication11 {
                case 12:
                  System.out.println("area de un cuadrado es = "+ calculadoraEspecial.CalculoArea(5,5));
                    break;
-           }
+           }*/
            
         } while(!salir);  
       
