@@ -41,8 +41,8 @@ public class JavaApplication11 {
            opcion = sn.nextInt();
           
            
-           
-          switch (opcion){
+          
+        switch (opcion){
                
                case 1:System.out.println("El resultado de la suma es = " + Calculadora.sumar(10, 5));
                    break;
@@ -86,9 +86,10 @@ public class JavaApplication11 {
                    break;
            }
            
-        }  while(!salir);  
+        } while(!salir);  
       
-    }
-    }
+        }
+        
+        }
     
-
+        
