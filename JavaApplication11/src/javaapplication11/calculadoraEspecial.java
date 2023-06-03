@@ -2,7 +2,7 @@
 package javaapplication11;
 
 
-public class calculadoraEspecial {
+public class calculadoraEspecial extends Calculadora{
      //Are de declaración de metodos
     //en clase hemos dicho "funciones" anteriormente, pero en POO son metodos.
     

@@ -5,7 +5,7 @@ package javaapplication11;
 public class Calculadora {
     
   
-     public String tipoCalculadora;
+   /*  public String tipoCalculadora;
     public String color;
     public int dimensionPantalla;
     private String numeroDeSerie;
@@ -18,7 +18,7 @@ public class Calculadora {
         this.numeroDeSerie="12345abc";
         this.color="Azul";
         this.nombrePropietario=propietario;
-    }
+    }*/
    
     
     //Constructor vacio
@@ -27,12 +27,16 @@ public class Calculadora {
     
     //Are de declaración de metodos
     //en clase hemos dicho "funciones" anteriormente, pero en POO son metodos.
-    public double sumar(double primerNumero, double segundoNumero){
-        return primerNumero + segundoNumero;
+    public double sumar(double primerNumero, double segundoNumero ){
+        double resultado;
+        resultado= primerNumero + segundoNumero;
+        return resultado;
     }
     
     public double restar(double primerNumero, double segundoNumero){
-        return primerNumero - segundoNumero;
+        double resultado;
+        resultado = primerNumero - segundoNumero;
+        return resultado;
     }
     
     public double multiplicar(double primerNumero, double segundoNumero){
