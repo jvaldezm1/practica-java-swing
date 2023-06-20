@@ -26,6 +26,7 @@ Calculadora cal = new Calculadora();
         num2 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         area = new javax.swing.JButton();
+        division = new javax.swing.JButton();
 
         jFormattedTextField1.setText("jFormattedTextField1");
 
@@ -78,6 +79,13 @@ Calculadora cal = new Calculadora();
             }
         });
 
+        division.setText("dividir");
+        division.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divisionActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -89,11 +97,13 @@ Calculadora cal = new Calculadora();
                 .addComponent(resta)
                 .addGap(62, 62, 62)
                 .addComponent(multiplicacion)
-                .addGap(80, 80, 80)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addComponent(division)
+                .addGap(49, 49, 49)
                 .addComponent(area)
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addGap(21, 21, 21))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(173, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(93, 93, 93)
@@ -124,7 +134,8 @@ Calculadora cal = new Calculadora();
                     .addComponent(multiplicacion)
                     .addComponent(resta)
                     .addComponent(suma)
-                    .addComponent(area))
+                    .addComponent(area)
+                    .addComponent(division))
                 .addGap(62, 62, 62)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
@@ -155,8 +166,8 @@ Calculadora cal = new Calculadora();
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
-        int primerNumero=Int.parseInt(num1.getText());
-        int segundoNumero=Int.parseInt(num2.getText());
+        int primerNumero=Integer.parseInt(num1.getText());
+        int segundoNumero=Integer.parseInt(num2.getText());
         int resultado =cal.sumar(primerNumero,segundoNumero);
         jTextField2.setText(String.valueOf(resultado));
     }//GEN-LAST:event_sumaActionPerformed
@@ -166,16 +177,16 @@ Calculadora cal = new Calculadora();
     }//GEN-LAST:event_num2ActionPerformed
 
     private void restaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaActionPerformed
-       double primerNumero=Double.parseDouble(num1.getText());
-      double segundoNumero=Double.parseDouble(num2.getText());
-      double resultado = cal.restar(primerNumero, segundoNumero);
+       int primerNumero=Integer.parseInt(num1.getText());
+      int segundoNumero=Integer.parseInt(num2.getText());
+      int resultado = cal.restar(primerNumero, segundoNumero);
       jTextField2.setText(String.valueOf(resultado));
     }//GEN-LAST:event_restaActionPerformed
 
     private void multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicacionActionPerformed
-        double primerNumero = Double.parseDouble(num1.getText());
-        double segundoNumero = Double.parseDouble(num2.getText());
-        double resultado = cal.multiplicar(primerNumero, segundoNumero);
+        int primerNumero = Integer.parseInt(num1.getText());
+        int segundoNumero = Integer.parseInt(num2.getText());
+        int resultado = cal.multiplicar(primerNumero, segundoNumero);
         jTextField2.setText(String.valueOf(resultado));
         
     }//GEN-LAST:event_multiplicacionActionPerformed
@@ -187,6 +198,13 @@ Calculadora cal = new Calculadora();
        jTextField2.setText(String.valueOf(resultado));
         
     }//GEN-LAST:event_areaActionPerformed
+
+    private void divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionActionPerformed
+       double primerNumero = Double.parseDouble(num1.getText());
+        double segundoNumero = Double.parseDouble(num2.getText());
+       double resultado = cal.dividir(primerNumero,segundoNumero);
+       jTextField2.setText(String.valueOf(resultado));
+    }//GEN-LAST:event_divisionActionPerformed
 
     
     public static void main(String args[]) {
@@ -221,6 +239,7 @@ Calculadora cal = new Calculadora();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton area;
+    private javax.swing.JButton division;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;

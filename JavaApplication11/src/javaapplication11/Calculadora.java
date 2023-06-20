@@ -33,13 +33,13 @@ public class Calculadora {
         return resultado;
     }
     
-    public double restar(double primerNumero, double segundoNumero){
-        double resultado;
+    public int restar(int primerNumero, int segundoNumero){
+        int resultado;
         resultado = primerNumero - segundoNumero;
         return resultado;
     }
     
-    public double multiplicar(double primerNumero, double segundoNumero){
+    public int multiplicar(int primerNumero, int segundoNumero){
         return primerNumero * segundoNumero;
     }
     
