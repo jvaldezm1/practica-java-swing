@@ -24,7 +24,6 @@ Calculadora cal = new Calculadora();
         num1 = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
         num2 = new javax.swing.JTextField();
-        resultado = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
         area = new javax.swing.JButton();
 
@@ -33,6 +32,7 @@ Calculadora cal = new Calculadora();
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(102, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.darkGray, null, null));
 
         resta.setText("resta");
         resta.addActionListener(new java.awt.event.ActionListener() {
@@ -65,8 +65,6 @@ Calculadora cal = new Calculadora();
             }
         });
 
-        resultado.setText("resultado");
-
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -93,13 +91,12 @@ Calculadora cal = new Calculadora();
                 .addComponent(multiplicacion)
                 .addGap(80, 80, 80)
                 .addComponent(area)
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(resultado)
-                        .addGap(18, 18, 18)
+                        .addGap(93, 93, 93)
                         .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -118,7 +115,7 @@ Calculadora cal = new Calculadora();
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -128,11 +125,9 @@ Calculadora cal = new Calculadora();
                     .addComponent(resta)
                     .addComponent(suma)
                     .addComponent(area))
-                .addGap(61, 61, 61)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(resultado)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22))
+                .addGap(62, 62, 62)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -160,9 +155,9 @@ Calculadora cal = new Calculadora();
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
-        double primerNumero=Double.parseDouble(num1.getText());
-        double segundoNumero=Double.parseDouble(num2.getText());
-        double resultado =cal.sumar(primerNumero,segundoNumero);
+        int primerNumero=Int.parseInt(num1.getText());
+        int segundoNumero=Int.parseInt(num2.getText());
+        int resultado =cal.sumar(primerNumero,segundoNumero);
         jTextField2.setText(String.valueOf(resultado));
     }//GEN-LAST:event_sumaActionPerformed
 
@@ -235,7 +230,6 @@ Calculadora cal = new Calculadora();
     private javax.swing.JTextField num1;
     private javax.swing.JTextField num2;
     private javax.swing.JButton resta;
-    private javax.swing.JButton resultado;
     private javax.swing.JButton suma;
     // End of variables declaration//GEN-END:variables
 }

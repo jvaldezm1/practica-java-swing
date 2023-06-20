@@ -27,8 +27,8 @@ public class Calculadora {
     
     //Are de declaración de metodos
     //en clase hemos dicho "funciones" anteriormente, pero en POO son metodos.
-    public double sumar(double primerNumero, double segundoNumero ){
-        double resultado;
+    public int sumar(int primerNumero, int segundoNumero ){
+        int resultado;
         resultado= primerNumero + segundoNumero;
         return resultado;
     }
